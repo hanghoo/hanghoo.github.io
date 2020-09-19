@@ -189,7 +189,7 @@ figure {
 	position: fixed;
 	overflow-y: scroll;
 	z-index: 1001;
-	background: $brand-gray;
+	background: $brand-gray; /* $brand-gray */
 	@include transition(.5s);
 
 	@media screen and (max-width: $screen-sm) {
@@ -325,7 +325,7 @@ figure {
 				display: inline;
 				list-style: none;
 				a {
-					color: rgba(255,255,255,.3);
+					color: rgba(255, 255, 255, 0.3);
 					padding: 4px;
 					&:hover, &:active, &:focus {
 						text-decoration: none;
