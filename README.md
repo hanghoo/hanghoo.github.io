@@ -1,6 +1,6 @@
 Homepage example
 =========================
 
-Source code for my [homepage](https://fjiang9.github.io/), which is forked from [Hao Zhou](https://github.com/zhouh/zhouh.github.io).
+Source code for my [homepage](http://hanghoo.github.io/), which is forked from [sangjinhan](https://github.com/sangjinhan/homepage), 
 
-Many thanks to [Hao Zhou](https://github.com/zhouh/zhouh.github.io).
+Many thanks to [sangjinhan](https://github.com/sangjinhan/homepage).
