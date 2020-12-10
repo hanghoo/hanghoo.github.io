@@ -1,0 +1,19 @@
+      <hr>
+      <small>
+        This webpage was built with
+        <a href="">Bootstrap</a> and 
+        <a href="https://github.com/mojombo/jekyll">Jekyll</a>. 
+        You can find the source code
+        <a href="https://github.com/hanghoo/hanghoo.github.io">here</a>.
+        Last updated: {{'now' | date: "%h %d, %Y"}}
+      </small>
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="static/bootstrap/js/bootstrap.js"></script>
+      <script type='text/javascript' id='clustrmaps' 
+      src="//cdn.clustrmaps.com/map_v2.js?cl=fafafa&w=250&t=tt&d=PZ9qH7WgRPAvPFi5dJvv15v17aeCT81PbNJVLFfXgXA"></script>
+      <!--<a href="https://www.easycounter.com/">
+      <img src="https://www.easycounter.com/counter.php?riverfly"
+      border="0" alt="HTML Hit Counter"></a> <i><font face="Arial" size="2">unique visitors since June 2020</font></i>-->
+   </div>
+  </body>
+</html>
