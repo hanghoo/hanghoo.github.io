@@ -3,7 +3,7 @@ Homepage example
 
 Source code for my [homepage](http://hanghoo.github.io/), which is forked from [sangjinhan](https://github.com/sangjinhan/homepage), 
 
-Many thanks to [sangjinhan](https://github.com/sangjinhan/homepage).
+Many thanks to [sangjinhan](https://github.com/sangjinhan/homepage), [Hao Zhou](https://github.com/zhouh/zhouh.github.io) and [fjiang9](https://github.com/fjiang9/fjiang9.github.io)
 
 Things we all know:
 <ul>
