@@ -16,9 +16,9 @@ Things we all know:
 </ul>
 
 Feel free to copy this webpage and customize it for your own:
-<ul>
-    1.Install Jekyll.
-    2.Modify the contents.
-    3.Run Jekyll.
-    4.Copy the result in _site/ to your web server
-</ul>   
+<ol>
+    <li>Install Jekyll.</li>
+    <li>Modify the contents.</li>
+    <li>Run Jekyll.</li>
+    <li>Copy the result in _site/ to your web server.</li>
+</ol>   
