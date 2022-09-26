@@ -1,4 +1,4 @@
-I"6<h1 id="scalable-event-multiplexing-epoll-vs-kqueue">Scalable Event Multiplexing: epoll vs. kqueue</h1>
+I"Þ6<h1 id="scalable-event-multiplexing-epoll-vs-kqueue">Scalable Event Multiplexing: epoll vs. kqueue</h1>
 
 <p>I like Linux much more than BSD in general, but I do want the kqueue functionality of BSD in Linux.</p>
 
@@ -14,7 +14,7 @@
 
 <p>select() and poll() are very similar in the way they work. Let me quickly review how select() looks like first.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select(int nfds, fd_set *r, fd_set *w, fd_set *e, struct timeval *timeout)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select(int nfds, fd_set *r, fd_set *w, fd_set *e, struct timeval *timeout)
 </code></pre></div></div>
 
 <p>With select(), your application needs to provide three <em>interest sets</em>, r, w, and e. Each set is represented as a bitmap of your file descriptor. For example, if you are interested in reading from file descriptor 6, the sixth bit of r is set to 1. The call is blocked, until one or more file descriptors in the interest sets become ready, so you can perform operations on those file descriptors without blocking. Upon return, the kernel overwrites the bitmaps to specify which file descriptors are ready.</p>
@@ -40,7 +40,7 @@
 
 <p>poll() is designed to address some of those issues.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poll(struct pollfd *fds, int nfds, int timeout)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poll(struct pollfd *fds, int nfds, int timeout)
 
 struct pollfd {
     int fd;
@@ -67,7 +67,7 @@ struct pollfd {
 
 <p>The epoll interface consists of three system calls:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int epoll_create(int size);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int epoll_create(int size);
 int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);
 int epoll_wait(int epfd, struct epoll_event *events, int maxevents, int timeout);
 </code></pre></div></div>
@@ -82,14 +82,14 @@ int epoll_wait(int epfd, struct epoll_event *events, int maxevents, int timeout)
 
 <p>Like epoll, kqueue also supports multiple contexts (interest sets) for each process. kqueue() performs the same thing as epoll_create(). However, the kevent() call integrates the role of epoll_ctl() (adjusting the interest set) and epoll_wait() (retrieving the events) with kevent().</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int kqueue(void);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int kqueue(void);
 int kevent(int kq, const struct kevent *changelist, int nchanges, 
            struct kevent *eventlist, int nevents, const struct timespec *timeout);
 </code></pre></div></div>
 
 <p>Actually kqueue is a bit more complicated than epoll, from the view of ease of programming. This is because kqueue is designed in a more abstracted way, to achieve generality. Let us take a look at how struct kevent looks like.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct kevent {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct kevent {
      uintptr_t       ident;          /* identifier for this event */
      int16_t         filter;         /* filter for event */
      uint16_t        flags;          /* general flags */
